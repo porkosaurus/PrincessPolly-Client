@@ -24,6 +24,14 @@ const ProductPage = () => {
     };
   
 
+    useEffect(() => {
+      // Calculate the width based on the number of sizes
+      const calculatedWidth = `${(10 * (item?.sizes?.length || 3))}%`;
+  
+      // Set the width of size-container
+      setSizeContainerWidth(calculatedWidth);
+    }, [item]);
+
 
     useEffect(() => {
         fetch('https://protected-dusk-79821-d54a1f8d392c.herokuapp.com/shop')
@@ -128,15 +136,15 @@ const ProductPage = () => {
               <button  className='products-button' onClick={addCartHandler}>Select Size</button>
               </div>
               <div className="size-container" style={{ width: sizeContainerWidth }}>
-              {item.sizes.map((size, index) => (
-                <div
-                  className={`size-button ${selectedSize === size ? 'selected' : ''}`}
-                  key={index}
-                  onClick={() => sizeButtonClickHandler(size)}
-                >
-                  <p>{size}</p>
-                </div>
-              ))}
+          {item.sizes.map((size, index) => (
+            <div
+              className={`size-button ${selectedSize === size ? 'selected' : ''}`}
+              key={index}
+              onClick={() => sizeButtonClickHandler(size)}
+            >
+              <p>{size}</p>
+            </div>
+          ))}
             </div>
               <div className='products-further-details'>
                 <h4 className='products-further-details-header'>Details & Care</h4>

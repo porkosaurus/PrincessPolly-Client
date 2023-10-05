@@ -19,7 +19,7 @@ const Checkout = () => {
           const updatedCartData = cartData.filter((item) => {
             return item.productId !== productId || item.selectedSize !== selectedSize;
           });
-          setCartData(updatedCartData); // Ensure this is correctly set
+          setCartData(updatedCartData); 
         } else {
           // Handle the case when the removal request fails
           console.error('Failed to remove item from cart');
