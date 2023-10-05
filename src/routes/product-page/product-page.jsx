@@ -30,7 +30,7 @@ const ProductPage = () => {
   
       // Set the width of size-container
       setSizeContainerWidth(calculatedWidth);
-    }, [item]);
+    }, []);
 
 
     useEffect(() => {
@@ -43,18 +43,6 @@ const ProductPage = () => {
       const item = data.find(item => item._id === itemId);
 
 
-      useEffect(() => {
-        // Count the number of size buttons dynamically
-        const sizeButtons = document.querySelectorAll('.size-button');
-        console.log(item)
-        setNumberOfSizeButtons(sizeButtons.length);
-        console.log("Number of size buttons", numberOfSizeButtons)
-        // Calculate the width based on the number of size buttons
-        const calculatedWidth = `${(10 * numberOfSizeButtons)}%`;
-    
-        // Set the width of size-container
-        setSizeContainerWidth(calculatedWidth);
-      }, [item]);
 
       const addCartHandler = () => {
 
