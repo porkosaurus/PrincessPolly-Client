@@ -26,7 +26,7 @@ const ProductPage = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:8000/shop')
+        fetch('https://protected-dusk-79821-d54a1f8d392c.herokuapp.com/shop')
           .then(response => response.json())
           .then(data => setData(data))
           .catch(err => console.log(err));
@@ -67,7 +67,7 @@ const ProductPage = () => {
         incrementCartCount();
         setCart(updatedCart);
     
-        fetch('http://localhost:8000/api/cart', {
+        fetch('https://protected-dusk-79821-d54a1f8d392c.herokuapp.com/api/cart', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
