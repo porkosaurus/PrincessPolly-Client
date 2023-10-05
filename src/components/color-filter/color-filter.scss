@@ -1,0 +1,274 @@
+/* Layout styles */
+.shop-page {
+    display: flex;
+}
+
+.filter-container {
+    height: 100vh;
+    display: flex;
+    width: 15%;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.shop-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.clothing-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0;
+    width: 30%;
+}
+
+/* Dropdown styles */
+.first-row-container {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+    height: 2vh;
+    background-color: #ebebeb;
+    padding: 0.5em 2em;
+}
+
+.fa-chevron-down {
+    margin-left: 0.2em;
+    margin-top: 0.3em;
+}
+
+
+
+/* Dropdown rows */
+.dropdown-row-individual {
+    border-radius: 50%;
+    padding: 0.7em;
+    margin: 0;
+    font-size: 0.75rem;
+    &-container{
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 0;
+    }
+}
+
+.dropdown-row-individual:hover {
+    background-color: white;
+}
+
+.dropdown-row{
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.dropdown-header{
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    margin-left: 3%;
+    font-weight: 700;
+    letter-spacing: 0.05rem;
+}
+
+
+/* Color dropdown specific styles */
+.color-dropdown {
+    margin-bottom: 2em;
+}
+
+.circle-label{
+    height: 1em;
+    width: 1em;
+    color: red;
+    border-radius: 10rem;
+    margin-left: 5%;
+    cursor: pointer;
+}
+
+.category{
+    border: 1px solid black;
+}
+
+.red{
+    background-color: red;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.green{
+    background-color: green;
+}
+
+.purple{
+    background-color: purple;
+}
+
+.yellow{
+    background-color: yellow;
+}
+
+.black{
+    background-color: black;
+}
+
+.pink{
+    background-color: pink;
+}
+
+.white{
+    background-color: #e7e7e7;
+}
+
+/* Search container styles */
+.search-container {
+    margin-top: 0.8em;
+    margin-bottom: 0.8em;
+    width: 55vw;
+}
+
+/* List link styles */
+.list-link {
+    color: #36454F;
+    text-align: center;
+    text-decoration: none;
+    align-self: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 0.05rem;
+    margin-bottom: 0.75em;
+    margin-right: 5%;
+}
+
+.list-link:visited {
+    color: #36454F;
+}
+
+/* Clothing search input styles */
+.clothing-search {
+    font-family: 'Playfair Display', serif;
+    background-color: #f2fec4;
+    width: 25%;
+    padding: 0.8em 0.2em;
+    border: 1px solid black;
+    margin-right: 1%;
+    margin-left: 1%;
+    &:focus{
+        border: 1px solid black;
+    }
+    &::placeholder{
+        text-align: center;
+    }
+}
+
+/* Clothing image styles */
+.clothing-image {
+    border: 1px solid black;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 80%;
+    height: auto;
+    position: relative;
+    cursor: pointer;
+}
+
+.image-overlay {
+    position: absolute;
+    background-color: black;
+    opacity: 0;
+    width: 18%;
+    height: 48%;
+}
+
+.image-overlay:hover {
+    opacity: 0.2;
+    width: 17%;
+    height: 48%;
+}
+
+/* Clothing description styles */
+.clothing-description {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Clothing price styles */
+.clothing-price {
+    color: #36454F;
+    text-align: center;
+    text-decoration: none;
+    align-self: flex-start;
+    font-family: 'Playfair Display', serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 0.05rem;
+    margin-bottom: 0.75em;
+}
+
+
+@media (max-width: 768px) {
+    .dropdown-container{
+        display: flex;
+        flex-direction: row;
+    }
+    .color-dropdown{
+        width: 40vw;
+        padding-right: 20%;
+    }
+    .category-dropdown{
+        width: 40vw;
+    }
+    .shop-page{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .filter-container{
+        flex-direction: column;
+        height: 20vh;
+        width: 100vw;
+    }
+
+    .search-container{
+        width: 55vw;
+        margin: 0;
+        display: flex;
+    }
+    .dropdown-row{
+        cursor: pointer;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    /* Dropdown rows */
+.dropdown-row-individual {
+    border-radius: 50%;
+    padding: 0.7em;
+    margin: 0;
+    font-size: 0.75rem;
+    &-container{
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+}
+
+    .clothing-search{
+        width: 100%;
+    }
+}

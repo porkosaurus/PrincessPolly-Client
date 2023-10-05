@@ -1,0 +1,81 @@
+.popular-styles{
+  &-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 80vh;
+    background-size: contain;
+    justify-content: space-around;
+    &-box{
+        height: 90%;
+        width: 30%;
+        margin-right: 4%;
+        background-size: cover;
+        background-image: url('https://cdn.shopify.com/s/files/1/0061/8627/0804/products/1-modelinfo-nat-US4_bf50100f-63f8-48e7-a965-baf139e320b6_1800x.progressive.jpg?v=1677644810');
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+
+
+        &:first-child {
+            margin-left: 0; 
+          }
+      
+          &:last-child {
+            margin-right: 0;
+          }
+    }
+
+    &-button{
+      border: 0.3px solid white;
+      width: 10em;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        font-size: 1.4rem;
+        letter-spacing: 0.2px;
+        margin-bottom: 20%;
+        padding: 6px 9px;
+        background: linear-gradient(to right, white 50%, black 50%);
+        background-size: 200% 100%;
+        background-position: right bottom;        color: white;
+        font-family: 'Playfair Display', serif;
+        -ms-flex-align: center;
+        letter-spacing: 0.1rem;
+        transition: background-position 0.5s ease;
+        &:hover{
+          border: 0.3px solid black;
+          background-position: left bottom;
+          transition: background-position 0.5s ease;
+          color: black
+        }
+    }
+}
+  &-full-container{
+    display: flex;
+    max-width: 100%;
+    flex-direction: column;
+  }
+
+  &-header{
+    align-self: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: 0.05rem;
+    line-height: 0.6rem;
+    margin-bottom: 0.75em;
+    transform: skewX(-3deg);
+    text-transform: uppercase;
+  }
+
+  &-link{
+    all: unset;
+  }
+}
+
+
+.header-1{
+  margin-top: 5%;
+  margin-bottom: 3%;
+}
