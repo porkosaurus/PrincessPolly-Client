@@ -27,7 +27,7 @@ const ProductPage = () => {
     useEffect(() => {
       // Calculate the width based on the number of sizes
       const calculatedWidth = `${(10 * (item?.sizes?.length || 3))}%`;
-      console.log(item.sizes.length)
+      console.log(item)
       // Set the width of size-container
       setSizeContainerWidth(calculatedWidth);
     }, [item]);
