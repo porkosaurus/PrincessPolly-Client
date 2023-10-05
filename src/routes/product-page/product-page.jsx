@@ -25,20 +25,19 @@ const ProductPage = () => {
   
 
     useEffect(() => {
-      // Calculate the width based on the number of sizes
-      const calculatedWidth = `${(10 * (item?.sizes?.length || 3))}%`;
-      console.log(item)
-      // Set the width of size-container
-      setSizeContainerWidth(calculatedWidth);
-    }, [item]);
-
-
-    useEffect(() => {
-        fetch('https://protected-dusk-79821-d54a1f8d392c.herokuapp.com/shop')
-          .then(response => response.json())
-          .then(data => setData(data))
-          .catch(err => console.log(err));
-      }, []);
+      fetch('https://protected-dusk-79821-d54a1f8d392c.herokuapp.com/shop')
+        .then((response) => response.json())
+        .then((data) => {
+          setData(data);
+          const item = data.find((item) => item._id === itemId);
+          if (item) {
+            // Calculate the width based on the number of sizes
+            const calculatedWidth = `${(10 * (item.sizes?.length || 3))}%`;
+            setSizeContainerWidth(calculatedWidth);
+          }
+        })
+        .catch((err) => console.log(err));
+    }, [itemId]);
 
       const item = data.find(item => item._id === itemId);
 
